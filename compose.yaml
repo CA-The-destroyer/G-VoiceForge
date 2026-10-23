@@ -1,0 +1,17 @@
+services:
+  studio:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports: ['127.0.0.1:8765:8765']
+    volumes:
+      - ./data:/data
+      - ./models:/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped

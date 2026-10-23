@@ -1,0 +1,21 @@
+# Local runtime and dependencies
+.venv/
+data/
+models/
+releases/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+.pytest_cache/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+*.db
+*.sqlite*
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.mp4
+*.zip
